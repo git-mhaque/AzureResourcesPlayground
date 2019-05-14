@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicSender", "TopicSender\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicReceiver", "TopicReceiver\TopicReceiver.csproj", "{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE54ED67-131E-46A7-9ADE-124535EB3580} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
+		{F0AFD476-2104-48DD-B8B8-C4B28E92DBCC} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
+		{BC806734-18CE-44FA-B2FD-0A277ACFDD3A} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
+		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F98CC31-CB0C-442A-9DB3-9E3570F8DC2D}
