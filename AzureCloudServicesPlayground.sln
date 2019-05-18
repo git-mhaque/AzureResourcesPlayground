@@ -1,17 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueSender", "MessageSender\QueueSender.csproj", "{EE54ED67-131E-46A7-9ADE-124535EB3580}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueReceiver", "MessageReceiver\QueueReceiver.csproj", "{F0AFD476-2104-48DD-B8B8-C4B28E92DBCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicSender", "TopicSender\TopicSender.csproj", "{BC806734-18CE-44FA-B2FD-0A277ACFDD3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopicSender", "TopicSender\TopicSender.csproj", "{BC806734-18CE-44FA-B2FD-0A277ACFDD3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopicReceiver", "TopicReceiver\TopicReceiver.csproj", "{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopicReceiver", "TopicReceiver\TopicReceiver.csproj", "{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiApp", "ApiApp\ApiApp.csproj", "{999AA555-6C98-4EFD-A0BB-E77464374BF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiService", "ApiService", "{4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFunctionApp", "MyFunctionApp\MyFunctionApp.csproj", "{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionApp", "FunctionApp", "{E0100760-30DD-4BA3-8D60-6AA16C025974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +43,14 @@ Global
 		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999AA555-6C98-4EFD-A0BB-E77464374BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999AA555-6C98-4EFD-A0BB-E77464374BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999AA555-6C98-4EFD-A0BB-E77464374BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999AA555-6C98-4EFD-A0BB-E77464374BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +60,8 @@ Global
 		{F0AFD476-2104-48DD-B8B8-C4B28E92DBCC} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
 		{BC806734-18CE-44FA-B2FD-0A277ACFDD3A} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
 		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
+		{999AA555-6C98-4EFD-A0BB-E77464374BF2} = {4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}
+		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7} = {E0100760-30DD-4BA3-8D60-6AA16C025974}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F98CC31-CB0C-442A-9DB3-9E3570F8DC2D}

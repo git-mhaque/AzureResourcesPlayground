@@ -10,7 +10,7 @@ namespace TopicReceiver
     {
         const string ServiceBusConnectionString = "Endpoint=sb://mh-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zq2dnRSYcFZEG2ldDJRlhKAABXFWElTCon31dre5MmI=";
         const string TopicName = "mytopic";
-        const string SubscriptionName = "mysub2";
+        const string SubscriptionName = "mysub1";
         static ISubscriptionClient subscriptionClient;
 
         static void Main(string[] args)
