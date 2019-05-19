@@ -37,4 +37,4 @@ az functionapp deployment source config-zip -g $resourceGroup -n $functionAppNam
 #=============================
 # Include app settings 
 #============================= 
-az functionapp config appsettings set -n $functionAppName -g $resourceGroup --settings "ServiceBus=Endpoint=sb://mh-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zq2dnRSYcFZEG2ldDJRlhKAABXFWElTCon31dre5MmI="
+az functionapp config appsettings set -n $functionAppName -g $resourceGroup --settings "ServiceBusConnectionString=Endpoint=sb://mh-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zq2dnRSYcFZEG2ldDJRlhKAABXFWElTCon31dre5MmI="
