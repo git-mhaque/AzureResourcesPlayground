@@ -1,25 +1,26 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.ServiceBus;
+using PlaygroundApp.Core;
 
-namespace ApiApp.Controllers
+namespace PlaygroundApp.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class PlayController : Controller
     {
+        private readonly INotificationService _notificationService;
+
+        public PlayController(INotificationService notificationService)
+        {
+            _notificationService = notificationService;
+        }
+                
         // GET api/values
         [HttpGet]
         public async Task<IEnumerable<string>> Get()
         {
-            var serviceBusConnectionString = "Endpoint=sb://mh-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zq2dnRSYcFZEG2ldDJRlhKAABXFWElTCon31dre5MmI=";
-            var topicName = "mytopic";
-            var topicClient = new TopicClient(serviceBusConnectionString, topicName);
-
-            var message = new Message(Encoding.UTF8.GetBytes("hello"));
-            await topicClient.SendAsync(message);
-
+            var message = Request.Query["msg"];    
+            await _notificationService.NotifyMessage(message.ToString() ?? "Hello");
             return new [] { "value1", "value2" };
         }
 

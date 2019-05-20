@@ -1,9 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PlaygroundApp.Core;
+using PlaygroundApp.ServiceBus.Azure;
 
-namespace ApiApp
+namespace PlaygroundApp.Api
 {
     public class Startup
     {
@@ -15,9 +20,19 @@ namespace ApiApp
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc().AddControllersAsServices();
+
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.Populate(services);
+            containerBuilder.RegisterModule(new CoreModule());
+            containerBuilder.RegisterModule(new AzureServiceBusModule());
+
+            var container = containerBuilder.Build();
+            var serviceProvider = new AutofacServiceProvider(container);
+
+            return serviceProvider;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

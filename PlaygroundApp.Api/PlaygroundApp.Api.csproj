@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <ApplicationInsightsResourceId>/subscriptions/c18f2bbb-79db-436f-a214-4a4c03cf455b/resourcegroups/mh_explore/providers/microsoft.insights/components/mh_app_insights</ApplicationInsightsResourceId>
     <ApplicationInsightsAnnotationResourceId>/subscriptions/c18f2bbb-79db-436f-a214-4a4c03cf455b/resourcegroups/mh_explore/providers/microsoft.insights/components/mh_app_insights</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
@@ -11,13 +11,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
-    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="3.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.5" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlaygroundApp.AzureServiceBus\PlaygroundApp.ServiceBus.Azure.csproj" />
+    <ProjectReference Include="..\PlaygroundApp.Core\PlaygroundApp.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.452
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueSender", "MessageSender\QueueSender.csproj", "{EE54ED67-131E-46A7-9ADE-124535EB3580}"
 EndProject
@@ -13,13 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopicReceiver", "TopicRecei
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiApp", "ApiApp\ApiApp.csproj", "{999AA555-6C98-4EFD-A0BB-E77464374BF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaygroundApp.Api", "PlaygroundApp.Api\PlaygroundApp.Api.csproj", "{999AA555-6C98-4EFD-A0BB-E77464374BF2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiService", "ApiService", "{4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiAppService", "ApiAppService", "{4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFunctionApp", "MyFunctionApp\MyFunctionApp.csproj", "{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFunctionApp", "MyFunctionApp\MyFunctionApp.csproj", "{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionApp", "FunctionApp", "{E0100760-30DD-4BA3-8D60-6AA16C025974}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionAppService", "FunctionAppService", "{E0100760-30DD-4BA3-8D60-6AA16C025974}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaygroundApp.Core", "PlaygroundApp.Core\PlaygroundApp.Core.csproj", "{96F46E59-2749-4775-8753-681080E281C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaygroundApp.ServiceBus.Azure", "PlaygroundApp.AzureServiceBus\PlaygroundApp.ServiceBus.Azure.csproj", "{77CC5386-59EA-45CF-B891-3E4E3AB0135A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F46E59-2749-4775-8753-681080E281C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F46E59-2749-4775-8753-681080E281C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F46E59-2749-4775-8753-681080E281C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F46E59-2749-4775-8753-681080E281C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77CC5386-59EA-45CF-B891-3E4E3AB0135A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77CC5386-59EA-45CF-B891-3E4E3AB0135A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77CC5386-59EA-45CF-B891-3E4E3AB0135A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77CC5386-59EA-45CF-B891-3E4E3AB0135A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +74,8 @@ Global
 		{656265DB-ED36-4552-B0A3-BE40D4BF6EBA} = {30CF7BEA-0B6C-4C61-BFBA-3506C4D70A3A}
 		{999AA555-6C98-4EFD-A0BB-E77464374BF2} = {4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}
 		{2C47686F-CDD2-43E4-AC4C-6AAFD25141C7} = {E0100760-30DD-4BA3-8D60-6AA16C025974}
+		{96F46E59-2749-4775-8753-681080E281C8} = {4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}
+		{77CC5386-59EA-45CF-B891-3E4E3AB0135A} = {4F9EDBE4-6D35-4471-882A-F6F4DA7EC60E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F98CC31-CB0C-442A-9DB3-9E3570F8DC2D}
